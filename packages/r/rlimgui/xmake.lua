@@ -11,7 +11,7 @@ package("rlimgui")
     end
 
     add_deps("raylib")
-    add_deps("imgui v1.92.7-docking", { configs = { docking = true, wchar32 = true } })
+    add_deps("imgui v1.92.7-docking", { configs = { wchar32 = true } })
 
     on_install("!cross and !bsd and !iphoneos", function (package)
         io.writefile("xmake.lua", [[
